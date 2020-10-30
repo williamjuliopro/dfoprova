@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>WebApplication AngularJS</title>
+    <meta charset="utf-8" />
+
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/script.js"></script>
+    <link href="Content/bootstrap.css" rel="stylesheet">
+</head>
+<body ng-app="myApp" class="container">
+
+
+    <div ng-controller="MainController">
+
+        {{error}}
+
+        <table class="table table-bordered table-striped">
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Age</td>
+                <td>Address</td>
+            </tr>
+
+            <tr ng-repeat="user in users">
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.age}}</td>
+                <td>{{user.address}}</td>
+            </tr>
+
+        </table>
+    </div>
+
+
+</body>
+</html>
